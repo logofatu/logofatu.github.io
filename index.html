@@ -1,0 +1,17 @@
+<audio id="audio">
+    <source src="http://dl.dropbox.com/u/1538714/article_resources/song.m4a" type="audio/mpeg" />
+    <source src="http://dl.dropbox.com/u/1538714/article_resources/song.ogg" type="audio/ogg" />
+</audio>
+<button id="button">Play</button>
+
+<script>
+// run on page load
+var button = document.getElementById('button');
+var audio = document.getElementById('audio');
+
+var onClick = function() {
+    audio.play(); // audio will load and then play
+};
+
+button.addEventListener('click', onClick, false);
+</script>
