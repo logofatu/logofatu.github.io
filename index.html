@@ -1,17 +1,25 @@
 <audio id="audio">
-    <source src="http://dl.dropbox.com/u/1538714/article_resources/song.m4a" type="audio/mpeg" />
-    <source src="http://dl.dropbox.com/u/1538714/article_resources/song.ogg" type="audio/ogg" />
+    <source src="http://edge126.rdsnet.ro:84/profm/dancefm.mp3" />
+   
 </audio>
-<button id="button">Play</button>
+<button id="button_start">Play</button>
+<button id="button_stop">
+Stop
+</button>
 
-<script>
 // run on page load
-var button = document.getElementById('button');
+var button_start = document.getElementById('button_start');
+var button_stop = document.getElementById('button_stop');
 var audio = document.getElementById('audio');
 
-var onClick = function() {
+var onClickPlay = function() {
     audio.play(); // audio will load and then play
 };
 
-button.addEventListener('click', onClick, false);
-</script>
+var onClickStop = function() {
+    audio.pause();
+		audio.currentTime = 0;
+};
+
+button_start.addEventListener('click', onClickPlay, false);
+button_stop.addEventListener('click', onClickStop, false);
